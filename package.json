@@ -6,12 +6,20 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "nodemon server"
+    "dev": "nodemon server/bin/www",
+    "pm2": "pm2 start server/bin/www"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "debug": "^4.1.1",
     "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-body-parser": "^1.1.2",
+    "koa-json-error": "^3.1.2",
+    "koa-parameter": "^3.0.1",
     "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.10.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
