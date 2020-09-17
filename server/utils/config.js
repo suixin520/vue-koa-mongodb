@@ -1,3 +1,4 @@
 module.exports = {
-  dbs: 'yours mongo'
+  dbs: 'yours mongo',
+  secret: 'yours secret'
 }
