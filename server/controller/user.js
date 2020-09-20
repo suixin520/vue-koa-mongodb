@@ -40,6 +40,16 @@ class UserController {
     ctx.body = { token }
   }
 
+  async getUserInfo(ctx) {
+    const { token } = ctx.request.body
+    try {
+      const user = JWT.verify(token, secret)
+      ctx.body = user
+    } catch(e) {
+      ctx.throw(401, e.message)
+    }
+  }
+
   async checkOwner(ctx, next) {
     if (ctx.params.id !== ctx.state.user._id) {
       ctx.throw(403, '你无权限进行该操作！')

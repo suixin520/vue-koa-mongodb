@@ -10,6 +10,7 @@
     "pm2": "pm2 start server/bin/www"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "debug": "^4.1.1",
     "element-ui": "^2.13.2",
